@@ -1,0 +1,63 @@
+@import "mySmartGrid";
+
+.docs {
+
+  // .docs__container
+
+  &__container {
+    @include container();
+  }
+
+  // .docs__title
+
+  &__title {
+    margin-top: 85px;
+    @include md {
+      margin-top: 55px;
+    }
+    @include thisFont("Bebas", 400, normal, 48px, #414141, 41px);
+    text-transform: uppercase;
+  }
+
+  // .docs__subtitle
+
+  &__subtitle {
+    @include thisFont("PTS", 700, normal, 24px, #565656, 18px);
+    text-transform: uppercase;
+    margin-top: 45px;
+  }
+
+  // .docs__list
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    
+  }
+
+  // .docs__item
+
+  &__item {
+    background-image: url(../img/content-img/pdf-icon.png);
+    background-position: 0 center;
+    background-repeat: no-repeat;
+    background-size: 55px 71px;
+    padding-left: 77px;
+    min-height: 71px;
+    box-sizing: border-box;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    @include size(6);
+    
+  }
+
+  // .docs__link
+
+  &__link {
+    @include thisFont("PTS", 400, normal, 24px, #539ae3, 18px);
+    &:hover {
+      color: #565656;
+    }
+  }
+}

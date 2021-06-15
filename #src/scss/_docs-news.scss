@@ -1,0 +1,64 @@
+@import "mySmartGrid";
+
+.news {
+
+  // .news__container
+
+  &__container {
+    @include container();
+  }
+
+  // .news__title
+
+  &__title {
+    @include thisFont("Bebas", 400, normal, 48px, #414141, 41px);
+  }
+
+  // .news__link
+
+  &__link {
+    @include thisFont("PTS", 400, normal, 24px, #3181d2, 18px);
+    &:hover {
+      color: #414141;
+    }
+  }
+
+  // .news__list
+
+  &__list {
+  }
+
+  // .news__item
+
+  &__item {
+
+    // .news__item_img
+
+    &_img {
+    }
+
+    // .news__item_date
+
+    &_date {
+      @include thisFont("PTS", 400, italic, 16px, #414141, 18px);
+    }
+
+    // .news__item_title
+
+    &_title {
+      @include thisFont("PTS", 400, normal, 24px, #838383, 18px);
+    }
+
+    // .news__item_descr
+
+    &_descr {
+      @include thisFont("PTS", 400, normal, 24px, #3181d2, 18px);
+    }
+
+    // .news__item_btn
+
+    &_btn {
+      @include thisFont("PTS", 400, normal, 24px, #3181d2, 18px);
+    }
+  }
+}
