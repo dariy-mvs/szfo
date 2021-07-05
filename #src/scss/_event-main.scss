@@ -1,0 +1,152 @@
+@import "mySmartGrid";
+
+.events {
+
+  // .events__container
+
+  &__container {
+    @include container();
+    padding-top: 95px;
+    @include sm {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+
+  // .events__title
+
+  &__title {
+    margin-left: 35px;
+    padding-bottom: 25px;
+    @include md {
+      padding-bottom: 0;
+      margin-left: 0;
+    }
+    
+
+    // .events__title_link
+
+    &_link {
+      @include thisFont("PTS", 700, normal, 24px, #3181d2,18px);
+      text-transform: uppercase;
+      &:hover {
+        color: #414141;
+      }
+    }
+  }
+  img {
+    @include thisFont("PTS", 400, normal, 24px, #5999da,18px);
+  }
+
+  // .events__list
+
+  &__list {
+    margin-bottom: 72px;
+    @include md {
+      margin-bottom: 40px;
+    }
+  }
+
+  // .events__item
+
+  &__item {
+    display: flex;
+    flex-wrap: wrap;
+    border: 1px solid #d4d4e1;
+    margin-top: 45px;
+    @include md {
+      flex-direction: column;
+      align-items: center;
+    };
+
+    // .events__item_img_wrapper
+
+    &_img_wrapper {
+      position: relative;
+      border-right: 1px solid #d4d4e1;
+      width: 100%;
+      min-height: 170px;
+      background-color: #e6f0f8;
+      max-width: 380px;
+      @include md {
+        max-width: 100%;
+      }
+    }
+
+    // .events__item_img
+    
+    &_img {
+      display: block;
+      height: 100%;
+      object-fit: cover;
+      @include md {
+        width: 100%;
+        height: auto;
+      }
+    }
+
+    // .events__item_date
+
+    &_date {
+      @include thisFont("PTS", 400, italic, 24px, #ffffff, 18px);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 114px;
+      height: 32px;
+      background-color: rgba(49, 129, 210, 0.78);
+    }
+
+    // .events__item_dscr
+
+    &_dscr {
+      flex: 2;
+      box-sizing: border-box;
+      padding: 25px;
+      @include sm {
+        padding: 15px;
+      }
+    }
+
+    // .events__item_title
+
+    &_title {
+    }
+
+    // .events__item_text
+
+    &_text {
+      @include thisFont("PTS", 400, normal, 24px, #2d3e50, 18px);
+      margin-top: 20px;
+    }
+  }
+}
+  .events__buttons_list {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  .events__buttons_item {
+    margin-right: 10px;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+  .events__button {
+    width: 29px;
+    height: 29px;
+    background-color: #3181d2;
+    @include thisFont("Roboto", 400, normal, 27px, #ffffff, 18px);
+    border: none;
+    
+  }
+  .active_button {
+    color: #2e2e2e;
+    background-color: #f0f4f8;
+  }
+
+  
+

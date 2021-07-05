@@ -1,13 +1,21 @@
 <header class="header">
-  <div class="header__container">
-    <img class="header__logo" src="img/desctop-img/logo.png"></img>
+  <div class="container header__container">
+    <picture>
+      <source srcset="img/desctop-img/logo_sm.png" media="(max-width: 460px)">
+      <img class="header__logo" src="img/desctop-img/logo.png" alt="логотип союза ректоров СЗФО">
+    </picture>
     <nav class="header__nav">
+      <button class="hamburger hamburger--spring" type="button">
+        <span class="hamburger-box">
+          <span class="hamburger-inner"></span>
+        </span>
+      </button>
       <ul class="header__nav_list">
-        <li class="header__nav_item"><a href="" class="header__nav_link">главная</a></li>
-        <li class="header__nav_item"><a href="" class="header__nav_link">о совете</a></li>
-        <li class="header__nav_item"><a href="" class="header__nav_link">документы</a></li>
-        <li class="header__nav_item"><a href="" class="header__nav_link">мероприятия и другие события</a></li>
-        <li class="header__nav_item"><a href="" class="header__nav_link">контакты</a></li>
+        <li class="header__nav_item"><a href="index.html" class="header__nav_link">главная</a></li>
+        <li class="header__nav_item"><a href="about-us.html" class="header__nav_link">о совете</a></li>
+        <li class="header__nav_item"><a href="docs.html" class="header__nav_link">документы</a></li>
+        <li class="header__nav_item"><a href="events.html" class="header__nav_link">мероприятия и другие события</a></li>
+        <li class="header__nav_item"><a href="contacts.html" class="header__nav_link">контакты</a></li>
       </ul>
     </nav>
   </div>

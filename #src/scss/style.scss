@@ -1,7 +1,14 @@
 @import "mySmartGrid";
 @import "fonts";
 @include reset();
+body {
+  overflow-x: hidden;
+}
 
 @import "header";
 @import "_docs";
 @import "docs-news";
+@import "footer";
+@import "event-main";
+@import "about-us";
+@import "contacts-main";

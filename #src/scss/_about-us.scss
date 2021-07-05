@@ -1,0 +1,275 @@
+@import "mySmartGrid";
+
+.about-us {
+
+  // .about-us__container
+
+  &__container {
+    @include container();
+    padding-top: 95px;
+    padding-right: 35px;
+
+  }
+
+  // .about-us__council
+
+  &__council {
+
+  }
+}
+.presidium {
+
+  // .presidium__box
+
+  &__box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-top: 40px;
+    @include lg {
+      flex-direction: column;
+    }
+  }
+
+  // .presidium__cons
+
+  &__cons {
+    @include size(8);
+    @include lg {
+      width: 100%;
+    }
+
+    // .presidium__cons_box
+
+    &_box {
+      @include size(4);
+      @include lg {
+        width: 100%
+      }
+      
+    }
+
+    // .presidium__cons_title
+
+    &_title {
+      @include thisFont("PTS", 700, normal, 24px, #565656, 18px);
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+
+    // .presidium__cons_dscr
+
+    &_dscr {
+      @include thisFont("PTS", 400, normal, 24px, #313131, 18px);
+      margin-bottom: 40px;
+      &:after {
+        content: "";
+        width: 123px;
+        height: 2px;
+        background-color: #3181d2;
+      }
+    }
+
+    // .presidium__cons_rec-list
+
+    &_rec-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      @include md {
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 35px;
+      }
+    }
+
+    // .presidium__cons_rec-item
+
+    &_rec-item {
+      width: calc(50% - 30px);
+      position: relative;
+      &:last-child {
+        @include md {
+          margin-bottom: 0;
+        }
+      }
+      @include md {
+        width: 100%;
+        margin-bottom: 70px;
+      }
+    }
+
+    // .presidium__cons_img
+
+    &_img {
+      width: 100%;
+
+    }
+
+    // .presidium__cons_people-descr
+    &_people-descr {
+      position: absolute;
+      left: -15px;
+      bottom: -50px;
+      right: 50px;
+
+    }
+     .people__descr_card {
+      background-color: rgba(23, 98, 173, 0.78);
+      padding: 15px 50px;
+      box-sizing: border-box;
+      position: relative;
+      @include md {
+        padding: 15px 30px;
+      }
+      //max-width: 310px;
+      &::after {
+        content: "";
+        width: 50px;
+        height: inherit;
+        display: block;
+        background: linear-gradient(to top right, rgba(23, 98, 173, 0.78) 50%, transparent 50%);
+        position: absolute;
+        left: 100%;
+        top: 0;
+        bottom: 0;
+      }
+    }
+  }
+
+  // .presidium__list
+
+  &__list {
+
+    // .presidium__list_title
+
+    &_title {
+      @include thisFont("PTS", 700, normal, 24px, #565656, 18px);
+      text-transform: uppercase;
+
+    }
+
+    // .presidium__list_link
+
+    &_link {
+      @include thisFont("PTS", 400, normal, 24px, #539ae3, 18px);
+      &:hover {
+        color: #414141;
+      }
+    }
+  }
+}
+.cons {
+
+  // .cons__people
+
+  &__people {
+
+    // .cons__people_title
+
+    &_title {
+      @include thisFont("PTS", 700, normal, 24px, #ffffff, 18px);
+      text-transform: uppercase;
+    }
+  }
+
+  // .cons__people-text
+
+  &__people-text {
+    @include thisFont("PTS", 400, normal, 24px, #f0f0f0, 18px);
+  }
+}
+.council {
+
+  // .council__title
+
+  &__title {
+  }
+
+  // .council__list
+
+  &__list {
+    margin-top: 60px;
+    display: grid;
+    grid-gap: 35px;
+    grid-template-columns: repeat(3, 1fr);
+    margin-bottom: 120px;
+    @include lg {
+      grid-template-columns: repeat(2, 1fr);
+      margin-bottom: 100px;
+    }
+    @include md {
+      grid-template-columns: 100%;
+      margin-top: 40px;
+      margin-bottom: 80px;
+    }
+
+  }
+
+  // .council__item
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    background-color: #f4f9ff;
+    padding: 30px;
+    min-height: 380px;
+    
+
+    // .council__item_title
+
+    &_title {
+      @include thisFont('PTS', 700, normal, 24px, #565656, 18px);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      flex: 1 0 auto;
+    }
+
+    // .council__item_position
+
+    &_position {
+      @include thisFont('PTS', 400, normal, 24px, #313131, 18px);
+    }
+
+    // .council__item_name
+
+    &_name {
+      @include thisFont('PTS', 700, normal, 24px, #313131, 18px);
+    }
+    &_name_wrap {
+      flex: 1 0 auto;
+      display: flex;
+      flex-direction: column;
+    }
+
+    // .council__item_comp-box
+
+    &_comp-box {
+      flex: 1 0 auto;
+    }
+  }
+}
+.comp-box {
+
+  // .comp-box__position
+
+  &__position {
+    @include thisFont('PTS', 400, normal, 24px, #313131, 18px);
+    
+  }
+
+  // .comp-box__name
+
+  &__name {
+    
+  }
+  
+}
+.document-link {
+  @include thisFont('PTS', 400, normal, 24px, #539ae3, 18px);
+  text-decoration: underline;
+  &:hover {
+    color: #313131;
+  }
+}

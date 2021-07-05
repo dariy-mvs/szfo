@@ -22,28 +22,28 @@
     font-family: $font;
     font-weight: 400;
     font-size: #{$size}; 
-    line-height: 46px;
+    line-height: 70px;
   }
   &:-moz-placeholder           { 
     color: #{$color};
     font-family: $font;
     font-weight: 400;
     font-size: #{$size}; 
-    line-height: 46px;
+    line-height: 70px;
   }
   &::-moz-placeholder          { 
     color: #{$color};
     font-family: $font;
     font-weight: 400;
     font-size: #{$size}; 
-    line-height: 46px;
+    line-height: 70px;
   }
   &:-ms-input-placeholder      { 
     color: #{$color};
     font-family: $font;
     font-weight: 400;
     font-size: #{$size}; 
-    line-height: 46px;
+    line-height: 70px;
   }
 }
 
@@ -81,7 +81,7 @@
 // }
 
 $fields: 20px;
-$max_width: 1140px;
+$max_width: 1200px;
 $columns: 12;
 $offset: 30px;
 $offset_xl: $offset;
@@ -96,14 +96,23 @@ $offset_xs: $offset;
 }
 
 @mixin container(){
+  
   max-width: $max_width;
   margin: 0 auto;
+  //box-sizing: border-box;
   @include container-full();
+  @include xl {
+    box-sizing: border-box;
+  }
   @include lg {
     width: 770px;
   }
   @include md {
     width: 460px;
+  }
+  @include sm {
+    width: 100%;
+    //width: #{calc(100% - #{$offset * 2})};
   }
 }
 
@@ -114,27 +123,38 @@ $offset_xs: $offset;
 
 @mixin size-xl($n){
   $val: 100% / $columns * $n;
-  @include xl(width, #{calc(#{$val} - #{$offset_xl})});
+  @include xl {
+    width: #{calc(#{$val} - #{$offset_lg})}
+  };
 }
 
 @mixin size-lg($n){
   $val: 100% / $columns * $n;
-  @include lg(width, #{calc(#{$val} - #{$offset_lg})});
+
+  @include lg {
+    width: #{calc(#{$val} - #{$offset_lg})}
+  };
 }
 
 @mixin size-md($n){
   $val: 100% / $columns * $n;
-  @include md(width, #{calc(#{$val} - #{$offset_md})});
+  @include md {
+    width: #{calc(#{$val} - #{$offset_lg})}
+  };
 }
 
 @mixin size-sm($n){
   $val: 100% / $columns * $n;
-  @include sm(width, #{calc(#{$val} - #{$offset_sm})});
+  @include sm {
+    width: #{calc(#{$val} - #{$offset_lg})}
+  };
 }
 
 @mixin size-xs($n){
   $val: 100% / $columns * $n;
-  @include xs(width, #{calc(#{$val} - #{$offset_xs})});
+  @include xs {
+    width: #{calc(#{$val} - #{$offset_lg})}
+  };
 }
 
 @mixin media($name, $value, $width){

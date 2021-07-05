@@ -1,12 +1,30 @@
 @import "mySmartGrid";
 
+.container {
+  @include container();
+  
+}
+.page__subtitle {
+  @include thisFont("PTS", 700, normal, 24px, #565656, 18px);
+    text-transform: uppercase;
+    margin-top: 45px;
+}
+
+.page_title {
+  @include thisFont("Bebas", 400, normal, 48px, #414141, 41px);
+  margin-top: 95px;
+@include md {
+  margin-top: 55px;
+}
+}
+
 .header {
   box-shadow: 0px 3px 15px 0px rgba(208,207,207,0.5);
+  position: relative;
 
   // .header__container
 
   &__container {
-    @include container();
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -16,7 +34,15 @@
   // .header__logo
 
   &__logo {
-    margin-left: -35px;
+    @include xl {
+      margin-left: 0;
+      width: 218px;
+      height: auto;
+    }
+    @include sm {
+      width: 150px;
+      height: auto;
+    }
 
   }
 
@@ -25,13 +51,25 @@
   &__nav {
     
 
-
     // .header__nav_list
 
     &_list {
       display: flex;
       flex-wrap: wrap;
       justify-content: flex-end;
+      margin-right: 35px;
+      @include lg {
+        display: none;
+        position: absolute;
+        top: 100%;
+        width: 100vw;
+        background-color: rgba(255, 255, 255, 0.9);
+        box-shadow: 0px 3px 15px 0px rgba(208,207,207,0.5);
+        left: 0;
+        justify-content: space-between;
+        padding: 0 20px 20px 20px;
+        box-sizing: border-box;
+      }
     }
 
     // .header__nav_item
@@ -41,6 +79,15 @@
       &:first-child {
         margin-left: 0;
       }
+      @include size-lg(4);
+      @include size-md(6);
+      @include size-sm(12);
+      @include lg {
+        margin-left: 0;
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+      }
     }
 
     // .header__nav_link
@@ -49,6 +96,13 @@
       @include thisFont("PTS", 400, normal, 16px, #414141, 18px);
       text-transform: uppercase;
       text-decoration: none;
+      @media screen and (max-width: 1050px) {
+        font-size: 16px;
+      }
+      @include lg {
+        text-align: center;
+      }
+      
       
       &:hover {
         text-decoration: underline;
@@ -56,4 +110,13 @@
       
     }
   }
+}
+.hamburger {
+  display: none;
+  @include lg {
+    display: inline-block;
+  }
+}
+.header .menu-active {
+  display: flex;
 }

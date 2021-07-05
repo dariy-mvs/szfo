@@ -1,0 +1,131 @@
+@import "mySmartGrid";
+
+.footer {
+  background-color: #29394b;
+
+  // .footer__container
+  
+  &__container {
+    @include container();
+    min-height: 355px;
+  }
+  // .footer__menu_wrapper
+
+  &__menu_wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 55px;
+    justify-content: space-between;
+    &:after {
+      content: "";
+      display: block;
+      margin-top: 40px;
+      width: 100%;
+      height: 2px;
+      background-color: #485a6c;
+    }
+  }
+  // .footer__box
+
+  &__box {
+    max-width: 345px;
+  }
+
+  // .footer__title
+
+  &__title {
+    @include thisFont("Roboto", 700, normal, 27px, #f0f4f8, 21px);
+    margin-bottom: 20px;
+    &:after {
+      content: "";
+      display: block;
+      width: 123px;
+      height: 2px;
+      margin-top: 15px;
+      background-color: #485a6c;
+    }
+  }
+
+  // .footer__menu
+
+  &__menu {
+
+    // .footer__menu_item
+
+    &_item {
+    }
+  }
+
+  // .footer__item
+
+  &__item {
+
+    // .footer__item_link
+
+    &_link {
+      @include thisFont("PTS", 400, normal, 24px, #9ba2ab, 14px);
+      text-transform: uppercase;
+      text-decoration: none;
+    }
+    
+  }
+  a {
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  // .footer__address
+
+  &__address {
+    min-width: 345px;
+
+    // .footer__address_title
+
+    &_title {
+      @include thisFont("Roboto", 700, normal, 27px, #f0f4f8, 21px);
+      margin-bottom: 40px;
+      @include md {
+        margin-top: 40px;
+      }
+
+    }
+
+    // .footer__address_list
+
+    &_list {
+    }
+
+    // .footer__address_item
+
+    &_item {
+      display: flex;
+     // align-items: center;
+    }
+
+    // .footer__address_text
+
+    &_text {
+      @include thisFont("PTS", 400, normal, 27px, #9ba2ab, 14px);
+      height: 35px;
+      text-transform: uppercase;
+      width: 98px;
+    }
+
+    // .footer__address_link
+
+    &_link {
+      @include thisFont("PTS", 400, normal, 27px, #ffffff, 16px);
+      text-transform: none;
+      text-decoration: none;
+      max-width: 247px;
+    }
+  }
+
+  // .footer__copyright
+
+  &__copyright {
+  }
+}
+.copyright {
+  @include thisFont("PTS", 400, normal, 70px, #9ba2ab, 16px);
+}

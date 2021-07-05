@@ -5,7 +5,9 @@
   // .docs__container
 
   &__container {
-    @include container();
+    padding-left: 35px;
+    padding-right: 35px;
+    box-sizing: border-box;
   }
 
   // .docs__title
@@ -22,9 +24,7 @@
   // .docs__subtitle
 
   &__subtitle {
-    @include thisFont("PTS", 700, normal, 24px, #565656, 18px);
-    text-transform: uppercase;
-    margin-top: 45px;
+    
   }
 
   // .docs__list
@@ -49,6 +49,7 @@
     margin-top: 40px;
     margin-bottom: 20px;
     @include size(6);
+    @include size-sm(12);
     
   }
 
