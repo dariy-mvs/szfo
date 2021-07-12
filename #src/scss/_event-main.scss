@@ -135,17 +135,35 @@
       margin-right: 0;
     }
   }
-  .events__button {
+  .pagination-container .page-link {
+    background: none;
     width: 29px;
     height: 29px;
     background-color: #3181d2;
     @include thisFont("Roboto", 400, normal, 27px, #ffffff, 18px);
     border: none;
-    
+    border-radius: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+    &:hover {
+      color: #000000;
+    }
   }
-  .active_button {
+  .pagination-container .current {
+    @include thisFont("Roboto", 400, normal, 27px, #2e2e2e, 18px);
     color: #2e2e2e;
     background-color: #f0f4f8;
+    border: none;
+    border-radius: 0;
+    width: 29px;
+    height: 29px;
+    box-sizing: border-box;
+  }
+
+  .pagination-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   
