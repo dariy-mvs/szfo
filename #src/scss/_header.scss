@@ -83,10 +83,14 @@
       @include size-md(6);
       @include size-sm(12);
       @include lg {
-        margin-left: 0;
+        margin: 0 auto;
         display: flex;
         justify-content: center;
         margin-top: 20px;
+        &:first-child {
+          margin-left: auto;
+          margin-right: auto;
+        }
       }
     }
 
@@ -117,6 +121,6 @@
     display: inline-block;
   }
 }
-.header .menu-active {
-  display: flex;
-}
+// .header .menu-active {
+//   display: flex;
+// }

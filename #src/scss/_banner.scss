@@ -1,0 +1,85 @@
+@import "mySmartGrid";
+
+.banner {
+  width: 100%;
+  min-height: 530px;
+  background-image: url(../img/desctop-img/banner-photo.png);
+  background-size: cover;
+  position: relative;
+  padding-bottom: 20px;
+  box-sizing: border-box;
+  &:after {
+    content: "";
+    background: linear-gradient(64deg, rgba(23, 98, 173, 0.78) 50%, transparent 50%);
+    @include xl {
+      background: linear-gradient(64deg, rgba(23, 98, 173, 0.78) 60%, transparent 40%);
+    }
+    @include lg {
+      background: linear-gradient(64deg, rgba(23, 98, 173, 0.78) 70%, transparent 30%);
+    }
+    @include md {
+      background: linear-gradient(64deg, rgba(23, 98, 173, 0.78) 80%, transparent 20%);
+    }
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    display: block;
+  }
+
+  .container {
+    position: relative;
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .page_title {
+    margin-top: 40px;
+    margin-bottom: 30px;
+    color: #ffffff;
+  }
+  &__descr_box {
+    max-width: 495px;
+    margin-right: auto;
+    margin-left: 30px;
+    display: flex;
+    flex-direction: column;
+    min-height: 400px;
+    flex: 1 0 auto;
+  }
+
+  // .banner__descr
+
+  &__descr {
+    @include thisFont("PTS", 400, normal, 24px, #f0f0f0,18px);
+    flex: 1 0 auto;
+  }
+
+  // .banner__btn
+
+  &__btn {
+    width: 220px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #163351;
+    @include thisFont("PTS", 400, normal, 16px, #ffffff,18px);
+    margin-top: 20px;
+    text-transform: uppercase;
+    text-decoration: none;
+    &:hover {
+      background-color: #091b2e;
+    }
+  }
+}
+
+.page {
+
+  // .page_title
+
+  &_title {
+  }
+}
